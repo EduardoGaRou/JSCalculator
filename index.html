@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>JavaScript Calculator</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+    <script defer type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="js/scripts.js"></script>
+</head>
+<body>
+
+	<div class="whole">
+		<div class="container">
+			<div class="row row-content">
+				<div class="col d-flex layout">
+					<h1>JavaScript Calculator</h1>
+				</div>
+			</div>
+		</div>
+		<div class="device">
+			<div class="container">
+				<div class="row row-content">
+					<div class="col d-flex layout">
+						<div class="col d-flex result">
+							<p id="myRes"></p>
+						</div>
+						<div class="col d-flex">
+							<table class="w-100">
+								<tr>
+									<td><button type="button" class="btn btn-danger w-100" onclick="pressClear()">Clear</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressSqrt()">sqrt</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressExp()">^</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressTimes()">*</button></td>
+								</tr>
+								<tr>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press7()">7</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press8()">8</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press9()">9</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressDiv()">/</button></td>
+								</tr>
+								<tr>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press4()">4</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press5()">5</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press6()">6</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressMinus()">-</button></td>
+								</tr>
+								<tr>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press1()">1</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press2()">2</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press3()">3</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressPlus()">+</button></td>
+								</tr>
+								<tr>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press000()">000</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press0()">0</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="pressDot()">.</button></td>
+									<td><button type="button" class="btn btn-success w-100" onclick="pressEqual()">=</button></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row row-content">
+				<div class="col d-flex daFooter">
+					<p>By: Eduardo García Rougon</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
