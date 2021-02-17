@@ -44,6 +44,7 @@ th, td {
 	padding-bottom: 30px;
 	margin: auto;
 	width: 80%;
+	justify-content: center;
 }
 
 	.device p {
@@ -67,4 +68,32 @@ th, td {
 	font-weight: bold;
 	font-family: serif;
 	font-size: 30px;
+}
+
+/*FOR IPAD*/
+@media only screen and (max-width: 991px) and (min-width: 501px) {
+	table {
+		border-spacing: 20px;
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
+	.result {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+}
+
+/*FOR MOBILE PHONE*/
+@media only screen and (max-width: 500px) {
+	table {
+		border-spacing: 20px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.result {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
 }
