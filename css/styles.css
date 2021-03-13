@@ -129,6 +129,10 @@ input:checked {
 		padding: 5px;
 	}
 
+	.device p {
+		font-family: serif;
+	}
+
 	.radios {
 		flex-direction: column;
 	}
@@ -158,6 +162,10 @@ input:checked {
 
 	th, td {
 		padding: 5px;
+	}
+
+	.device p {
+		font-family: serif;
 	}
 
 	.device {
