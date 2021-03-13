@@ -25,8 +25,30 @@ th, td {
 	width: 100px;
 }
 
+input {
+	appearance: none;
+
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+
+	border: 2px solid #333333;
+	transition: 0.2s all linear;
+	margin-right: 5px;
+	margin-left: 5px;
+
+	position: relative;
+	cursor: pointer;
+}
+
+input:checked {
+	border: 5px solid black;
+	background-color: #FF0000;
+	font-weight: bolder;
+}
+
 .whole {
-	background-color: #33B3B3;
+	background-image: linear-gradient(#118181,#73F3F3,#118181);
 	background-attachment: fixed;
 }
 
@@ -38,8 +60,31 @@ th, td {
 		text-decoration: underline; 
 	}
 
+.radios {
+	flex-direction: row;
+	font-family: sans-serif;
+	font-size: 20px;
+	width: 80%;
+	margin-bottom: 30px;
+	margin-top: 0px;
+}
+
+	.calcType {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background-image: linear-gradient(to right,#33B333,#66E666);
+		margin-right: 5px;
+	}
+
+	.angleMeas {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background-image: linear-gradient(to left,#8259CA,#B58CFD);
+		margin-left: 5px;
+	}
+
 .device {
-	background-color: rgba(255,166,0,1); 
+	background-image: linear-gradient(to right,rgba(255,166,0,1),rgba(255,220,50,0.8),rgba(255,166,0,1)); 
 	padding-top: 30px;
 	padding-bottom: 30px;
 	margin: auto;
@@ -56,11 +101,13 @@ th, td {
 
 .layout {
 	flex-direction: column;
+	text-align: center;
 }
 
 .result {
-	margin-left: 200px;
-	margin-right: 200px;
+	justify-content: flex-end;
+	align-self: center;
+	width: 50%;
 }
 
 .daFooter {
@@ -73,27 +120,65 @@ th, td {
 /*FOR IPAD*/
 @media only screen and (max-width: 991px) and (min-width: 501px) {
 	table {
-		border-spacing: 20px;
+		border-spacing: 10px;
 		margin-left: 50px;
 		margin-right: 50px;
 	}
 
+	th, td {
+		padding: 5px;
+	}
+
+	.radios {
+		flex-direction: column;
+	}
+
+	.calcType {
+		margin-right: 10px;
+	}
+
+	.angleMeas {
+		margin-left: 0px;
+		margin-right: 10px;
+		margin-top: 10px;
+	}
+
 	.result {
-		margin-left: 50px;
-		margin-right: 50px;
+		width: 76%;
 	}
 }
 
 /*FOR MOBILE PHONE*/
 @media only screen and (max-width: 500px) {
 	table {
-		border-spacing: 20px;
+		border-spacing: 10px;
 		margin-left: 0px;
 		margin-right: 0px;
 	}
 
-	.result {
+	th, td {
+		padding: 5px;
+	}
+
+	.device {
+		width: 100%;
+	}
+
+	.radios {
+		flex-direction: column;
+	}
+
+	.calcType {
+		margin-right: 10px;
+	}
+
+	.angleMeas {
 		margin-left: 0px;
-		margin-right: 0px;
+		margin-right: 10px;
+		margin-top: 10px;
+	}
+
+	.result {
+		width: 91%;
 	}
 }

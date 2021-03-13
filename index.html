@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" type="image/png" href="icon.png" />
 
     <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -24,15 +25,42 @@
 				</div>
 			</div>
 		</div>
+		<div class="container">
+			<div class="row row-content">
+				<div class="col d-flex radios">
+					<div class="col-12 col-lg-6 calcType">
+						<p><b>Calculator type:</b></p>
+						<div>
+							<input type="radio" name="calculator" id="simple" value="simple" checked onclick="typeCheck()">
+							<label for="simple">Simple</label>
+							<input type="radio" name="calculator" id="scientific" value="scientific" onclick="typeCheck()">
+							<label for="scientific">Scientific</label>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6 angleMeas">
+						<p><b>Angle Measurement:</b></p>
+						<div>
+							<input type="radio" name="scale" id="degrees" value="degrees" checked>
+							<label for="degrees">Degrees</label>
+							<input type="radio" name="scale" id="radians" value="radians">
+							<label for="radians">Radians</label>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
 		<div class="device">
-			<div class="container">
+			<div class="container d-flex justify-content-center">
 				<div class="row row-content">
 					<div class="col d-flex layout">
 						<div class="col d-flex result">
-							<p id="myRes"></p>
+							<div class="d-flex row">	
+								<p id="myRes"></p>
+							</div>
 						</div>
 						<div class="col d-flex">
-							<table class="w-100">
+							<!-- Simple Calculator -->
+							<table class="w-100" id="calc1">
 								<tr>
 									<td><button type="button" class="btn btn-danger w-100" onclick="pressClear()">Clr</button></td>
 									<td><button type="button" class="btn btn-primary w-100" onclick="pressSqrt()">√</button></td>
@@ -58,12 +86,57 @@
 									<td><button type="button" class="btn btn-primary w-100" onclick="pressPlus()">+</button></td>
 								</tr>
 								<tr>
-									<td><button type="button" class="btn btn-secondary w-100" onclick="press000()">000</button></td>
+									<td><button type="button" class="btn btn-danger w-100" onclick="pressDelete()">Del</button></td>
 									<td><button type="button" class="btn btn-secondary w-100" onclick="press0()">0</button></td>
 									<td><button type="button" class="btn btn-secondary w-100" onclick="pressDot()">.</button></td>
 									<td><button type="button" class="btn btn-success w-100" onclick="pressEqual()">=</button></td>
 								</tr>
 							</table>
+							<!-- Scientific Calculator -->
+							<table class="w-100" id="calc2">
+								<tr>
+									<td><button type="button" class="btn btn-danger w-100" onclick="pressClear()">Clr</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressExp()">exp</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressLn()">ln</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressLog()">log</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressSin()">sin</button></td>
+								</tr>
+								<tr>
+									<td><button type="button" class="btn btn-danger w-100" onclick="pressDelete()">Del</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressSqrt()">√</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressPow()">^</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressTimes()">*</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressCos()">cos</button></td>
+								</tr>
+								<tr>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press7()">7</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press8()">8</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press9()">9</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressDiv()">/</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressTan()">tan</button></td>
+								</tr>
+								<tr>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press4()">4</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press5()">5</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press6()">6</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressMinus()">-</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressAsin()">asin</button></td>
+								</tr>
+								<tr>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press1()">1</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press2()">2</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press3()">3</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressPlus()">+</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressAcos()">acos</button></td>
+								</tr>
+								<tr>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="toggleSign()">+/-</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="press0()">0</button></td>
+									<td><button type="button" class="btn btn-secondary w-100" onclick="pressDot()">.</button></td>
+									<td><button type="button" class="btn btn-success w-100" onclick="pressEqual()">=</button></td>
+									<td><button type="button" class="btn btn-primary w-100" onclick="pressAtan()">atan</button></td>
+								</tr>
+							</table>	
 						</div>
 					</div>
 				</div>
@@ -79,3 +152,6 @@
 	</div>
 
 </body>
+
+</html>
+							
