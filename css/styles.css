@@ -130,7 +130,7 @@ input:checked {
 	}
 
 	.device p {
-		font-family: serif;
+		font-family: serif !important;
 	}
 
 	.radios {
