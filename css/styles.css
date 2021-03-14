@@ -70,15 +70,15 @@ input:checked {
 }
 
 	.calcType {
-		padding-top: 5px;
-		padding-bottom: 5px;
+		padding-top: 5px !important;
+		padding-bottom: 5px !important;
 		background-image: linear-gradient(to right,#33B333,#66E666);
 		margin-right: 5px;
 	}
 
 	.angleMeas {
-		padding-top: 5px;
-		padding-bottom: 5px;
+		padding-top: 5px !important;
+		padding-bottom: 5px !important;
 		background-image: linear-gradient(to left,#8259CA,#B58CFD);
 		margin-left: 5px;
 	}
@@ -138,10 +138,14 @@ input:checked {
 	}
 
 	.calcType {
+		padding-top: 5px !important;
+		padding-bottom: 5px !important;
 		margin-right: 10px;
 	}
 
 	.angleMeas {
+		padding-top: 5px !important;
+		padding-bottom: 5px !important;
 		margin-left: 0px;
 		margin-right: 10px;
 		margin-top: 10px;
@@ -165,7 +169,7 @@ input:checked {
 	}
 
 	.device p {
-		font-family: serif;
+		font-family: serif !important;
 	}
 
 	.device {
@@ -177,10 +181,14 @@ input:checked {
 	}
 
 	.calcType {
+		padding-top: 5px !important;
+		padding-bottom: 5px !important;
 		margin-right: 10px;
 	}
 
 	.angleMeas {
+		padding-top: 5px !important;
+		padding-bottom: 5px !important;
 		margin-left: 0px;
 		margin-right: 10px;
 		margin-top: 10px;
