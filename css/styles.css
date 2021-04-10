@@ -83,6 +83,10 @@ input:checked {
 		margin-left: 5px;
 	}
 
+.fake {
+	height: 0px;
+}
+
 .device {
 	background-image: linear-gradient(to right,rgba(255,166,0,1),rgba(255,220,50,0.8),rgba(255,166,0,1)); 
 	padding-top: 30px;
@@ -138,17 +142,17 @@ input:checked {
 	}
 
 	.calcType {
-		padding-top: 5px !important;
-		padding-bottom: 5px !important;
 		margin-right: 10px;
 	}
 
 	.angleMeas {
-		padding-top: 5px !important;
-		padding-bottom: 5px !important;
 		margin-left: 0px;
 		margin-right: 10px;
 		margin-top: 10px;
+	}
+
+	.fake {
+		height: 210px;
 	}
 
 	.result {
@@ -181,17 +185,17 @@ input:checked {
 	}
 
 	.calcType {
-		padding-top: 5px !important;
-		padding-bottom: 5px !important;
 		margin-right: 10px;
 	}
 
 	.angleMeas {
-		padding-top: 5px !important;
-		padding-bottom: 5px !important;
 		margin-left: 0px;
 		margin-right: 10px;
 		margin-top: 10px;
+	}
+
+	.fake {
+		height: 210px;
 	}
 
 	.result {
